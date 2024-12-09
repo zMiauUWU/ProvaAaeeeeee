@@ -1,0 +1,35 @@
+@API_HostAddress = http://localhost:5291
+
+### Listar Imcs
+GET http://localhost:5291/api/imc/listar
+
+### Listar Usuario por id
+GET http://localhost:5291/api/imc/listarPorUsuario/5
+
+### Cadastrar Usuarios
+POST http://localhost:5291/api/Usuario/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "Romero",
+  "DataNasc" : "14/04/2004"
+}
+
+### Criar IMC
+POST http://localhost:5291/api/imc/cadastrar
+Content-Type: application/json
+
+{
+  "UsuarioId": 6,
+  "altura": 1.50,
+  "peso": 47
+}
+
+### Atualizar IMC
+PUT http://localhost:5291/api/imc/atualizar/6
+Content-Type: application/json
+
+{
+   "altura": 1.73,
+  "peso": 83
+}
